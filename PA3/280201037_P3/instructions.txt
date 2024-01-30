@@ -1,0 +1,39 @@
+instructions
+
+0) JUMP 
+28 00 00 08 ---> 00101000 000000000000000000001000
+jumps to address 8
+
+1) NOR 
+25 12 50 27  --->  00100101 0001 0010 0101 000000 100111 
+nor operation on register 1 and 2, result is written in register 5
+
+2) SW
+27 90 00 04 ---> 00100111 1001 0000 0000000000000100
+rs = 9
+rt = 0
+offset = 4 
+the value in regsiter 0 is stored in data memory at address calculated as (register 9 value + offset)
+
+3)ADDİ
+2B 12 00 17 ---> 00101011 0001 0010 0000000000010111
+value in register 1 + 23(hex 17 ) is written in register 2
+
+4)BNE
+2A 12 00 04 ---> 00101010 0001 0010 0000000000000100
+register 1 and 2 are compared, if values are not equal, branched to the (pc+4)+4
+
+5)LW
+26 95 00 04 ---> 00100110 1001 0101 0000000000000100
+rs = 9
+rt = 5
+offset = 4 
+the value at address (register 9 value + offset) is written into the register 5
+
+BEQ
+29 12 00 04 ---> 00101001 0001 0010 0000000000000100
+
+
+
+
+
